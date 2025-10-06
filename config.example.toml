@@ -1,0 +1,7 @@
+[binance]
+api_key = "<BINANCE-API-KEY>"
+api_secret = "<BINANCE-API-SECRET>"
+
+[dca]
+quantity_usdt = 40
+symbol = "BTCUSDT"
