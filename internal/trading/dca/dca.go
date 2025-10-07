@@ -3,6 +3,7 @@ package dca
 import (
 	"fmt"
 	"log/slog"
+	"time"
 
 	"github.com/Bergion/binance-btc-dca-bot/pkg/binance"
 )
@@ -46,6 +47,8 @@ func (d *Executor) Execute() {
 	}
 
 	slog.Info("Redeemed USDT", slog.Float64("quantity_usdt", quantityUSDT))
+
+	time.Sleep(5 * time.Second)
 
 	slog.Info("Placing buy order", slog.Float64("quantity_btc", quantityBTC))
 
