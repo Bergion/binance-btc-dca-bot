@@ -41,10 +41,11 @@ func (c *Client) PlaceBuyOrder(symbol string, quantity float64) error {
 	quantityStr := fmt.Sprintf("%.2f", quantity)
 
 	_, err := c.client.NewOrder(&binancePkg.NewOrderOpts{
-		Symbol:   symbol,
-		Side:     binancePkg.OrderSideBuy,
-		Type:     binancePkg.OrderTypeMarket,
-		Quantity: quantityStr,
+		Symbol:      symbol,
+		Side:        binancePkg.OrderSideBuy,
+		Type:        binancePkg.OrderTypeMarket,
+		TimeInForce: binancePkg.TimeInForceGTC,
+		Quantity:    quantityStr,
 	})
 	if err != nil {
 		return errors.WithStack(err)
