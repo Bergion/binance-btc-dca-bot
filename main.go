@@ -47,7 +47,7 @@ func NewDCACron(executor *dca.Executor) *cron.Cron {
 			cron.Recover(cron.DefaultLogger),
 		),
 	)
-	c.AddFunc("30 7 * * *", executor.Execute)
+	c.AddFunc("30 13 * * *", executor.Execute)
 
 	return c
 }
