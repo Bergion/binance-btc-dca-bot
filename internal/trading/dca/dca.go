@@ -1,6 +1,7 @@
 package dca
 
 import (
+	"fmt"
 	"log/slog"
 
 	"github.com/Bergion/binance-btc-dca-bot/pkg/binance"
@@ -36,10 +37,22 @@ func (d *Executor) Execute() {
 
 	quantityBTC := quantityUSDT / tickerStat.LastPrice()
 
+	slog.Info("Redeeming USDT", slog.Float64("quantity_usdt", quantityUSDT))
+
+	err = d.binanceClient.RedeemFlexible("USDT", fmt.Sprintf("%.2f", quantityUSDT))
+	if err != nil {
+		slog.Error("Failed to redeem USDT: ", slog.Any("error", err))
+		return
+	}
+
+	slog.Info("Redeemed USDT", slog.Float64("quantity_usdt", quantityUSDT))
+
 	slog.Info("Placing buy order", slog.Float64("quantity_btc", quantityBTC))
 
 	err = d.binanceClient.PlaceBuyOrder(d.config.Symbol, quantityBTC)
 	if err != nil {
 		slog.Error("Failed to place buy order: ", slog.Any("error", err))
 	}
+
+	slog.Info("Buy order placed", slog.Float64("quantity_btc", quantityBTC))
 }
