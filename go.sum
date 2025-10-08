@@ -2,6 +2,8 @@ github.com/adshao/go-binance/v2 v2.8.6 h1:IUZ6Wo0XSbcr4zIH45fRpX5DC4CsemrG7CDvgr
 github.com/adshao/go-binance/v2 v2.8.6/go.mod h1:XkkuecSyJKPolaCGf/q4ovJYB3t0P+7RUYTbGr+LMGM=
 github.com/bitly/go-simplejson v0.5.0 h1:6IH+V8/tVMab511d5bn4M7EwGXZf9Hj6i2xSwkNEM+Y=
 github.com/bitly/go-simplejson v0.5.0/go.mod h1:cXHtHw4XUPsvGaxgjIAn8PhEWG9NfngEKAMDJEczWVA=
+github.com/cenkalti/backoff/v4 v4.3.0 h1:MyRJ/UdXutAwSAT+s3wNd7MfTIcy71VQueUuFK343L8=
+github.com/cenkalti/backoff/v4 v4.3.0/go.mod h1:Y3VNntkOUPxTVeUxJ/G5vcM//AlwfmyYozVcomhLiZE=
 github.com/eranyanay/binance-api v0.0.0-20190408204030-b55a418abc86 h1:ZGkXzx+4KpyhVYE125MxvJGPJyarf+Jtj/TU4lWRFJ8=
 github.com/eranyanay/binance-api v0.0.0-20190408204030-b55a418abc86/go.mod h1:1MGBFKtSfxuPby2yOsSVPWAaqbo9ZH7OXKDYbTU6R2M=
 github.com/fsnotify/fsnotify v1.9.0 h1:2Ml+OJNzbYCTzsxtv8vKSFD9PbJjmhYF14k/jKC7S9k=
