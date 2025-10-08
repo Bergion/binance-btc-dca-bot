@@ -44,7 +44,11 @@ func (d *Executor) execute() error {
 
 	quantityUSDT := d.config.QuantityUSDT
 
-	if tickerStat.PriceChangePercentage() < -5 {
+	if tickerStat.LastPrice() < 100000 {
+		quantityUSDT *= 2
+	}
+
+	if tickerStat.PriceChangePercentage() <= -3 {
 		quantityUSDT *= 2
 	}
 
